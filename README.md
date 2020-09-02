@@ -29,6 +29,17 @@ To install from source, run:
 ```bash
 $ python3 setup.py install
 ```
+## Settings
+`marquez-airflow` needs to know where to talk to the Marquez server API.  You can set these using environment variables to be read by your Airflow service.
+
+You will also need to set the namespace if you are using something other than the `default` namespace.
+```
+MARQUEZ_HOST=my_hosted_marquez.example.com
+MARQUEZ_PORT=5000
+MARQUEZ_NAMESPACE=my_special_ns
+```
+
+*NOTE: In the latest version of `marquez-python`, the constructor requires a `url` parameter for the host and port.  Presumably, the logic to read the env vars will move into this library*
 
 ## Usage
 
