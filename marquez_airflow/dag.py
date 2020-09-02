@@ -14,7 +14,7 @@ import json
 import os
 import time
 
-from marquez_client import MarquezClient
+from marquez_client import Clients
 
 import airflow.models
 from marquez_airflow import log
@@ -292,7 +292,7 @@ class DAG(airflow.models.DAG):
 
     def get_marquez_client(self):
         if not self._marquez_client:
-            self._marquez_client = MarquezClient()
+            self._marquez_client = Clients.new_write_only_client()
         return self._marquez_client
 
     @staticmethod
