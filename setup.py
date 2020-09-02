@@ -16,7 +16,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 NAME = "marquez-airflow"
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 
 setuptools.setup(
     name=NAME,
@@ -29,7 +29,7 @@ setuptools.setup(
     url="https://github.com/MarquezProject/marquez-airflow",
     packages=setuptools.find_packages(),
     install_requires=[
-        "marquez-python==0.6.0",
+        "marquez-python==0.7.2",
         "sqlparse==0.3.1"
     ],
 )
