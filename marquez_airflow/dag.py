@@ -14,7 +14,7 @@ import json
 import os
 import time
 
-from marquez_client import Clients
+from marquez_client.clients import Clients
 
 import airflow.models
 from marquez_airflow import log
