@@ -174,7 +174,11 @@ class DAG(airflow.models.DAG):
         # If no extractor found or failed to extract metadata,
         # report the task metadata
         if not steps_metadata:
-            steps_metadata = [StepMetadata(task_name)]
+            steps_metadata = [StepMetadata(
+                name=task_name,
+                context={
+                    'airflow_operator_type': task.__class__
+                })]
 
         # store all the JobRuns associated with a task
         marquez_jobrun_ids = []
