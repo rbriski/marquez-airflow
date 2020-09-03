@@ -36,8 +36,7 @@ $ python3 setup.py install
 
 You will also need to set the namespace if you are using something other than the `default` namespace.
 ```
-MARQUEZ_HOST=my_hosted_marquez.example.com
-MARQUEZ_PORT=5000
+MARQUEZ_URL=http://my_hosted_marquez.example.com:5000
 MARQUEZ_NAMESPACE=my_special_ns
 ```
 
